@@ -11,7 +11,7 @@ This first Lab was mainly based on finding a way to display the question without
 
 ### ANIMATED GIF 
  
-https://recordit.co/LJK9TB0XRV
+https://recordit.co/LJK9TB0XRV.git
 
 ## Required
 - [x] Create New Project in Xcode
@@ -20,6 +20,9 @@ https://recordit.co/LJK9TB0XRV
 - [x] Build in logic to show the answer side when the card is tapped
 - [x] Push code to GitHub
 ## Optional
-- [ ] Toggle the flashcard between the question side and the answer side
-- [ ] Style the question and answer side of the card to better distinguish between the two side
-- [ ] Add selectable multiple choice answers beneath the card
+- [x] Toggle the flashcard between the question side and the answer side
+- [x] Style the question and answer side of the card to better distinguish             between the two side
+- [x] Add selectable multiple choice answers beneath the card
+
+##ANIMATED GIF FOR OPTIONAL
+https://recordit.co/sAomv6AcL3

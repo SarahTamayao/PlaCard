@@ -13,16 +13,107 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var frontLabel: UILabel!
     
+    @IBOutlet weak var Card: UIView!
+   
+    @IBOutlet weak var btnOptionOne: UIButton!
     
-    override func viewDidLoad() {
+    @IBOutlet weak var btnOptionTwo: UIButton!
+    
+    @IBOutlet weak var btnOptionThree: UIButton!
+    
+    
+    override func viewDidLoad()
+    {
+        Card.layer.shadowRadius = 15.0
+        Card.layer.shadowOpacity = 0.2
+        Card.layer.cornerRadius = 20.0
+        
+        frontLabel.layer.cornerRadius = 20.0
+        backLabel.layer.cornerRadius = 20.0
+        
+        frontLabel.layer.shadowRadius = 15.0
+        frontLabel.layer.shadowOpacity = 0.2
+        
+        backLabel.layer.shadowRadius = 15.0
+        backLabel.layer.shadowOpacity = 0.2
+        
+        btnOptionOne.layer.cornerRadius = 20.0
+        btnOptionTwo.layer.cornerRadius = 20.0
+        btnOptionThree.layer.cornerRadius = 20.0
+        
+        btnOptionOne.layer.borderWidth = 3.0
+        btnOptionTwo.layer.borderWidth = 3.0
+        btnOptionThree.layer.borderWidth = 3.0
+        
+        btnOptionOne.layer.borderColor = UIColor.magenta.cgColor
+        btnOptionTwo.layer.borderColor = UIColor.magenta.cgColor
+        btnOptionThree.layer.borderColor = UIColor.magenta.cgColor
+    
+        
+        frontLabel.clipsToBounds = true
+        backLabel.clipsToBounds = true
+
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+       
     }
 
-    @IBAction func didTapOnPlacard(_ sender: Any) {
+    
+    @IBAction func didTapOnPlaCard(_ sender: Any)
+    {
         
-        frontLabel.isHidden = true
+        if(frontLabel.isHidden == true){
+            frontLabel.isHidden = false
+        }
+        else
+        {
+            frontLabel.isHidden = true
+        }
+        
+        btnOptionOne.isHidden = false
+        btnOptionThree.isHidden = false
+        
     }
+    
+    
+    @IBAction func didTapOptionOne(_ sender: Any)
+    {
+         btnOptionOne.isHidden = true
+    }
+    
+    @IBAction func didTapOptionTwo(_ sender: Any)
+    {
+        
+      
+        
+        
+        if(frontLabel.isHidden == true && backLabel.isHidden==true)
+        {
+            backLabel.isHidden = false
+        }
+        else if(frontLabel.isHidden == false && backLabel.isHidden == false)
+       {
+            frontLabel.isHidden = true
+        }
+        else if(frontLabel.isHidden == false && backLabel.isHidden == true)
+        {
+            frontLabel.isHidden = true
+            backLabel.isHidden = false
+        }
+        else if(frontLabel.isHidden == true && backLabel.isHidden == false)
+        {
+            
+        }
+       
+        
+    
+    }
+    
+    
+    @IBAction func didTapOptionThree
+    (_ sender: Any)
+    {
+        btnOptionThree.isHidden = true
+    }
+    
     
 }
-
