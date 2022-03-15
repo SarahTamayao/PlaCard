@@ -24,5 +24,5 @@ https://recordit.co/LJK9TB0XRV.git
 - [x] Style the question and answer side of the card to better distinguish             between the two side
 - [x] Add selectable multiple choice answers beneath the card
 
-##ANIMATED GIF FOR OPTIONAL
+## ANIMATED GIF FOR OPTIONAL
 https://recordit.co/sAomv6AcL3
