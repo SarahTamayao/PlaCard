@@ -22,6 +22,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnOptionThree: UIButton!
     
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+        let  navigationController = segue.destination as! UINavigationController
+        
+        let secondController = navigationController.topViewController as! SecondViewController
+       
+        secondController.viewController = self
+    }
+    
     override func viewDidLoad()
     {
         Card.layer.shadowRadius = 15.0
@@ -83,8 +92,6 @@ class ViewController: UIViewController {
     @IBAction func didTapOptionTwo(_ sender: Any)
     {
         
-      
-        
         
         if(frontLabel.isHidden == true && backLabel.isHidden==true)
         {
@@ -103,8 +110,6 @@ class ViewController: UIViewController {
         {
             
         }
-       
-        
     
     }
     
@@ -113,6 +118,14 @@ class ViewController: UIViewController {
     (_ sender: Any)
     {
         btnOptionThree.isHidden = true
+    }
+    
+    
+    func updateFlashCard(question: String , answer:String )
+    {
+        frontLabel.text = question
+        backLabel.text = answer
+        btnOptionTwo.setTitle(answer, for: .normal)
     }
     
     

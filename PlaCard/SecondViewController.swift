@@ -7,9 +7,18 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
-
-    override func viewDidLoad() {
+class SecondViewController: UIViewController
+{
+    
+    var viewController :ViewController!
+    
+    @IBOutlet weak var questionTextField: UITextField!
+    
+    @IBOutlet weak var answerTextField: UITextField!
+    
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -20,6 +29,17 @@ class SecondViewController: UIViewController {
         dismiss(animated: true)
     }
     
+    @IBAction func didTapOnDone(_ sender: Any)
+    {
+        let questionText = questionTextField.text
+        let answerText = answerTextField.text
+        
+        
+        viewController.updateFlashCard(question: questionText!, answer: answerText! )
+        
+        dismiss(animated : true)
+        
+    }
     
     /*
     // MARK: - Navigation

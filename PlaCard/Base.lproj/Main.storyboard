@@ -154,7 +154,16 @@
                                 <action selector="didTapOnCancel:" destination="cpf-qP-024" id="hMv-Bt-rSx"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="xGH-bg-x9H">
+                            <connections>
+                                <action selector="didTapOnDone:" destination="cpf-qP-024" id="zXP-oi-cK0"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="answerTextField" destination="RK2-pQ-teL" id="UGT-eR-JIA"/>
+                        <outlet property="questionTextField" destination="EeM-V9-dYj" id="Y0v-hF-5FL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iKk-7R-NA8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
