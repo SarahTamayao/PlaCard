@@ -17,11 +17,23 @@ class SecondViewController: UIViewController
     @IBOutlet weak var answerTextField: UITextField!
     
     
+    @IBOutlet weak var extraAnswerOne: UITextField!
+    
+    @IBOutlet weak var extraAnswerTwo: UITextField!
+    
+     
+    var initialQuestion : String?
+    
+    var initialAnswer: String?
+    
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        questionTextField.text = initialQuestion
+        answerTextField.text = initialAnswer
+
     }
     
     @IBAction func didTapOnCancel(_ sender: Any)
@@ -33,11 +45,27 @@ class SecondViewController: UIViewController
     {
         let questionText = questionTextField.text
         let answerText = answerTextField.text
+        let extraAnswer = extraAnswerOne.text
+        let anotherAnswer = extraAnswerTwo.text
+        //the question and answer will be set to nil if there are empty
         
-        
-        viewController.updateFlashCard(question: questionText!, answer: answerText! )
-        
-        dismiss(animated : true)
+        if (questionText == nil || answerText == nil || questionText!.isEmpty || answerText!.isEmpty)
+        {
+            //displays an error message
+           
+            let alert = UIAlertController(title: "Missing Text", message: "You must enter both a question and an answer", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Ok", style: .default)
+            alert.addAction(okAction)
+            present(alert, animated: true)
+            
+        }
+        else
+        {
+            viewController.updateFlashCard(question:questionText!, answer: answerText!, extraAnswerOne: extraAnswer!, extraAnswerTwo: anotherAnswer!)
+            dismiss(animated : true)
+        }
+       
+       
         
     }
     

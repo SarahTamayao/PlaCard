@@ -30,7 +30,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" What is the 23rd Element of The Periodic Table" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmn-f7-TkZ">
-                                        <rect key="frame" x="-10" y="-129" width="392" height="386"/>
+                                        <rect key="frame" x="-10" y="-115" width="396" height="371"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" systemColor="systemPinkColor"/>
                                         <gestureRecognizers/>
@@ -53,7 +53,7 @@
                                     <color key="baseForegroundColor" systemColor="systemYellowColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="didTapOptionOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ck3-Gp-DJm"/>
+                                    <action selector="didTapOptionOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dBE-7t-Ifu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3F0-cs-Cb8">
@@ -67,7 +67,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="didTapOptionTwo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qrS-Vf-BQH"/>
+                                    <action selector="didTapOptionTwo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="paG-ha-8jI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U9a-DT-l6t">
@@ -78,7 +78,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Hydrogen(H)"/>
                                 <connections>
-                                    <action selector="didTapOptionThree:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ib5-pX-rj6"/>
+                                    <action selector="didTapOptionThree:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wkG-9i-zvf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQY-if-5D3">
@@ -92,13 +92,30 @@
                                     <segue destination="nv3-NR-Occ" kind="presentation" id="Oma-Zl-kH2"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jdg-nT-RGO">
+                                <rect key="frame" x="337" y="416" width="65" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="✏️">
+                                            <attributes>
+                                                <font key="NSFont" metaFont="system" size="38"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="nv3-NR-Occ" kind="presentation" identifier="EditSegue" id="jF2-Ni-hKD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="uYg-dK-bat" appends="YES" id="jg7-As-UWX"/>
-                            <outletCollection property="gestureRecognizers" destination="As6-OH-TDI" appends="YES" id="2Jq-Eo-ftn"/>
                         </connections>
                     </view>
                     <connections>
@@ -113,14 +130,10 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="uYg-dK-bat">
                     <connections>
-                        <action selector="didTapOnPlaCard:" destination="BYZ-38-t0r" id="frL-da-q33"/>
+                        <action selector="didTapOnPlaCard:" destination="BYZ-38-t0r" id="dmu-9w-hqH"/>
                     </connections>
                 </tapGestureRecognizer>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="As6-OH-TDI">
-                    <connections>
-                        <action selector="didLongTab:" destination="BYZ-38-t0r" id="btC-0k-uER"/>
-                    </connections>
-                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="As6-OH-TDI"/>
             </objects>
             <point key="canvasLocation" x="-59.420289855072468" y="-68.303571428571431"/>
         </scene>
@@ -144,6 +157,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MCQ answer #2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rpt-DL-8aS">
+                                <rect key="frame" x="99" y="585" width="219" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MCQ answer #1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4t1-bD-ysb">
+                                <rect key="frame" x="99" y="470" width="219" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="e8r-em-Q91"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -162,6 +187,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="answerTextField" destination="RK2-pQ-teL" id="UGT-eR-JIA"/>
+                        <outlet property="extraAnswerOne" destination="4t1-bD-ysb" id="sfX-cP-fto"/>
+                        <outlet property="extraAnswerTwo" destination="Rpt-DL-8aS" id="V2w-uf-7Su"/>
                         <outlet property="questionTextField" destination="EeM-V9-dYj" id="Y0v-hF-5FL"/>
                     </connections>
                 </viewController>
@@ -188,6 +215,9 @@
             <point key="canvasLocation" x="782.60869565217399" y="-68.303571428571431"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Oma-Zl-kH2"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

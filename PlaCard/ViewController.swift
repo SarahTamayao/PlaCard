@@ -22,15 +22,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnOptionThree: UIButton!
     
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    
-        let  navigationController = segue.destination as! UINavigationController
-        
-        let secondController = navigationController.topViewController as! SecondViewController
-       
-        secondController.viewController = self
-    }
-    
     override func viewDidLoad()
     {
         Card.layer.shadowRadius = 15.0
@@ -65,7 +56,20 @@ class ViewController: UIViewController {
         super.viewDidLoad()
        
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+        let  navigationController = segue.destination as! UINavigationController
+        
+        let secondController = navigationController.topViewController as! SecondViewController
+       
+        secondController.viewController = self
+    if(segue.identifier == "EditSegue")
+    {
+        secondController.initialQuestion = frontLabel.text
+        secondController.initialAnswer = backLabel.text
+    }
+    }
     
     @IBAction func didTapOnPlaCard(_ sender: Any)
     {
@@ -112,7 +116,7 @@ class ViewController: UIViewController {
         }
     
     }
-    
+
     
     @IBAction func didTapOptionThree
     (_ sender: Any)
@@ -121,12 +125,15 @@ class ViewController: UIViewController {
     }
     
     
-    func updateFlashCard(question: String , answer:String )
+    func updateFlashCard(question: String , answer:String , extraAnswerOne: String?, extraAnswerTwo:String?)
     {
         frontLabel.text = question
         backLabel.text = answer
+        btnOptionOne.setTitle(extraAnswerOne, for: .normal)
         btnOptionTwo.setTitle(answer, for: .normal)
+        btnOptionThree.setTitle(extraAnswerTwo, for: .normal)
     }
     
     
 }
+
