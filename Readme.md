@@ -9,6 +9,10 @@ This lab was focused on creating another screem ( view controller ). Created a s
 
 http://g.recordit.co/y6uVa7Ptb2.gif
 
+user can canel and return to first screen
+
+https://recordit.co/KIVtnha80C.gif
+
 
 ## Required
 - [x] User can open the creation screen
@@ -36,7 +40,7 @@ This first Lab was mainly based on finding a way to display the question without
 
 ### ANIMATED GIF 
  
-https://recordit.co/LJK9TB0XRV.git
+https://recordit.co/LJK9TB0XRV.gif
 
 ## Required
 - [x] Create New Project in Xcode
