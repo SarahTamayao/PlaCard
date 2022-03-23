@@ -57,7 +57,6 @@ class SecondViewController: UIViewController
             let okAction = UIAlertAction(title: "Ok", style: .default)
             alert.addAction(okAction)
             present(alert, animated: true)
-            
         }
         else
         {
