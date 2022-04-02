@@ -17,13 +17,17 @@ https://recordit.co/cTRFco27NB
 - [x] User can re-open the app and see previously created flashcards
 - [x] Push code to GitHub
 ## Optional
-- [ ] User can delete a flashcard
-- [ ] User can edit existing flashcard
-- [ ] User can store multiple choice questions
+- [x] User can delete a flashcard
+- [x] User can edit existing flashcard
+- [x] User can store multiple choice questions
+
+## ANIMATED GIF FOR OPTIONAL
+https://recordit.co/ryxM7hLQvV.gif
+
 ## Lab 2
 
 ### App Description
-This lab was focused on creating another screem ( view controller ). Created a second screen where user can edit existing Flash Card. User enters question and desired answer.
+This lab was focused on creating another screem (view controller). Created a second screen where user can edit existing Flash Card. User enters question and desired answer.
 
 ### App Walk-though
 

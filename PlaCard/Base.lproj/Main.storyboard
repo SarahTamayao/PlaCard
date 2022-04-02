@@ -132,6 +132,17 @@
                                     <action selector="didTapOnPrev:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BgK-xg-Fse"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="16r-2M-Yj2">
+                                <rect key="frame" x="5" y="95" width="66" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Delete">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapOnDelete:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OHV-Ih-2uh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -146,6 +157,7 @@
                         <outlet property="btnOptionOne" destination="uiL-Ye-FB3" id="bZO-jr-gUz"/>
                         <outlet property="btnOptionThree" destination="U9a-DT-l6t" id="YdP-kf-fe3"/>
                         <outlet property="btnOptionTwo" destination="3F0-cs-Cb8" id="ocm-wz-0mC"/>
+                        <outlet property="deleteBtn" destination="16r-2M-Yj2" id="Jnd-SY-blX"/>
                         <outlet property="frontLabel" destination="nmn-f7-TkZ" id="xkw-37-0YS"/>
                         <outlet property="nextButton" destination="EHY-99-LVg" id="dfm-fC-UhT"/>
                         <outlet property="prevButton" destination="g8K-Mr-AjE" id="h0T-vm-TAf"/>

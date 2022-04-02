@@ -16,7 +16,6 @@ class SecondViewController: UIViewController
     
     @IBOutlet weak var answerTextField: UITextField!
     
-    
     @IBOutlet weak var extraAnswerOne: UITextField!
     
     @IBOutlet weak var extraAnswerTwo: UITextField!
@@ -45,11 +44,12 @@ class SecondViewController: UIViewController
     {
         let questionText = questionTextField.text
         let answerText = answerTextField.text
-        let extraAnswer = extraAnswerOne.text
-        let anotherAnswer = extraAnswerTwo.text
+        let extraAnswerText = extraAnswerOne.text
+        let anotherAnswerText = extraAnswerTwo.text
+        
         //the question and answer will be set to nil if there are empty
         
-        if (questionText == nil || answerText == nil || questionText!.isEmpty || answerText!.isEmpty)
+        if (questionText == nil || answerText == nil || questionText!.isEmpty || answerText!.isEmpty||extraAnswerText == nil || anotherAnswerText == nil || extraAnswerText!.isEmpty || anotherAnswerText!.isEmpty )
         {
             //displays an error message
            
@@ -60,7 +60,13 @@ class SecondViewController: UIViewController
         }
         else
         {
-            viewController.updateFlashCard(question:questionText!, answer: answerText!, extraAnswerOne: extraAnswer!, extraAnswerTwo: anotherAnswer!)
+            // See if card is existing
+            var isExisting = false
+            if (initialQuestion != nil){
+                isExisting = true
+            }
+            
+            viewController.updateFlashCard(question:questionText!, answer: answerText!, extraAnswerOne: extraAnswerText!,extraAnswerTwo: anotherAnswerText!, isExisting: isExisting)
             dismiss(animated : true)
         }
        
