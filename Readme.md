@@ -3,14 +3,10 @@
 ## Lab 4
 
 ### App Description
-`TODO://` Add app description
+ Animation is added to the flashcard app
 
 ### App Walk-though
-<img src="YOUR_GIF_URL_HERE" width=200><br>
- Animation is added to the flashcard app
- 
-https://recordit.co/9thUkX3iaR
-
+<img src="https://recordit.co/9thUkX3iaR" width=200><br>
 
 ## Required
 - [x] User should see the app icon 
@@ -21,7 +17,7 @@ https://recordit.co/9thUkX3iaR
 - [x] Push code to GitHub
 ## Optional
 - [x] User should see a nicer flaschard with rounded corners, shadows, and animating when showing the first time
-- [] User should see all views properly layout when using the app on a phone of different sizes
+- [ ] User should see all views properly layout when using the app on a phone of different sizes
 - [x] Correct answer in multiple choice should be random
 ## Lab 3
 
