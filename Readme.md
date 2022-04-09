@@ -6,7 +6,7 @@
  Animation is added to the flashcard app
 
 ### App Walk-though
-<img src="https://recordit.co/9thUkX3iaR" width=200><br>
+<img src="https://recordit.co/9thUkX3iaR.gif" width=200><br>
 
 ## Required
 - [x] User should see the app icon 
